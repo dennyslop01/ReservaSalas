@@ -1,0 +1,18 @@
+{% extends 'layout/base.html' %}
+
+{% block 'title' %} Sala {{ room.name }} {% endblock 'title' %}
+
+{% block 'content' %}
+<span class="aux-btns">
+    <a href="{% url 'room' %}">Volver</a>
+</span>  
+
+<ul class="list">
+    <li><b>Nombre:</b> {{ room.name }}</li>
+    <li><b>Telefono:</b> {{ room.phone }}</li>
+    <li><b>Direccion:</b> {{ room.address }}</li>
+    <li><b>Fecha Inicio:</b> {{ room.date_start }}</li>
+    <li><b>Disponible:</b> {{ room.enabled }}</li>
+    <li><b>Notas:</b> {{ room.notes }}</li>
+</ul>
+{% endblock 'content' %}   

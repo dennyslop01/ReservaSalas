@@ -1,0 +1,27 @@
+{% extends 'layout/base.html' %}
+
+{% block 'title' %} Salas {% endblock 'title' %}
+
+{% block 'content' %}
+<form class="search" action="{% url 'room' %}" method="GET">
+    <input type="text" name="search" class="search-bar" placeholder="Buscar salas..." />
+    <input type="submit" value="Buscar" class="btn search-btn" />
+</form>
+
+<span class="aux-btns">
+    <a href="{% url 'room' %}">Ver Todos</a>
+    <a href="{% url 'room_create' %}">Añadir Salas</a>
+</span>  
+
+<ul class="list">
+    {% for room in  rooms%}
+        <li>{{ room }}
+            <span>
+                <a href="{% url 'room_view' id=room.id %}" class="btn btn-detail">Ver</a>
+                <a href="{% url 'room_edit' id=room.id %}" class="btn btn-edit">Editar</a>
+                <a href="{% url 'room_delete' id=room.id %}" class="btn btn-delete">Borrar</a>
+            </span>
+        </li>
+    {% endfor %}
+</ul>
+{% endblock 'content' %}   

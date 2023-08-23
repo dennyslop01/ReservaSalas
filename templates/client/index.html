@@ -10,16 +10,16 @@
 
 <span class="aux-btns">
     <a href="{% url 'client' %}">Ver Todos</a>
-    <a href="{% url 'client' %}">Añadir Cliente</a>
+    <a href="{% url 'client_create' %}">Añadir Cliente</a>
 </span>  
 
 <ul class="list">
     {% for client in  clients%}
         <li>{{ client }}
             <span>
-                <a hresf='' class="btn btn-detail">Ver</a>
-                <a hresf='' class="btn btn-edit">Editar</a>
-                <a hresf='' class="btn btn-delete">Borrar</a>
+                <a href="{% url 'client_view' id=client.id %}" class="btn btn-detail">Ver</a>
+                <a href="{% url 'client_edit' id=client.id %}" class="btn btn-edit">Editar</a>
+                <a href="{% url 'client_delete' id=client.id %}" class="btn btn-delete">Borrar</a>
             </span>
         </li>
     {% endfor %}

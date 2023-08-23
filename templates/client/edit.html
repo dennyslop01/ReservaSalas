@@ -1,6 +1,6 @@
 {% extends 'layout/base.html' %}
 
-{% block 'title' %} Crear Cliente {% endblock 'title' %}
+{% block 'title' %} Editar Cliente {% endblock 'title' %}
 
 {% block 'styles' %}
     {% load static %}
@@ -20,7 +20,7 @@
     <a href="{% url 'client' %}">Volver</a>
 </span>  
 <br>
-<form action="{% url 'client_create' %}" method="POST">
+<form action="{% url 'client_edit' id=id %}" method="POST">
     {% csrf_token %}
     <table>
         {{ form.as_table }}

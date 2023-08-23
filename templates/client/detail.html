@@ -1,0 +1,21 @@
+{% extends 'layout/base.html' %}
+
+{% block 'title' %} Cliente {{ client.name }} {% endblock 'title' %}
+
+{% block 'content' %}
+<span class="aux-btns">
+    <a href="{% url 'client' %}">Volver</a>
+</span>  
+
+<ul class="list">
+    <li><b>Nombre:</b> {{ client.name }}</li>
+    <li><b>Apellido:</b> {{ client.last_name }}</li>
+    <li><b>Telefono:</b> {{ client.phone }}</li>
+    <li><b>Celular:</b> {{ client.mobile }}</li>
+    <li><b>Email:</b> {{ client.email }}</li>
+    <li><b>Empresa_</b> {{ client.company }}</li>
+    <li><b>Fecha Inicio:</b> {{ client.date_start }}</li>
+    <li><b>DNI:</b> {{ client.dni }}</li>
+    <li><b>Notas:</b> {{ client.notes }}</li>
+</ul>
+{% endblock 'content' %}   
