@@ -1,0 +1,158 @@
+:root{
+    --color-primary: #008cff;
+    --color-text: gray;
+    --font-main: SuperMario256;
+    --font-text: Roboto-Regular;
+    --font-title: Roboto-Bold;
+}
+
+/* Main Settings */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--color-text);
+    color: var(--color-text);
+}
+
+@font-face {
+    font-family: Roboto-Bold;
+    src: url('../fonts/Roboto-Bold.ttf');
+}
+
+@font-face {
+    font-family: Roboto-Regular;
+    src: url('../fonts/Roboto-Regular.ttf');
+}
+
+@font-face {
+    font-family: SuperMario256;
+    src: url('../fonts/SuperMario256.ttf');
+}
+
+h1, h2, h3, h4, h5, h6{
+    font-family: var(--font-main);
+}
+
+/* Layout Settings */
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 80px;
+    background-color: var(--color-primary);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    width: 90vw;
+    justify-content: center;
+    align-items: center;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+    font-family: var(--font-title);
+    padding: 10px;
+}
+
+nav ul li a:hover {
+    color: var(--color-text);
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    margin: 50px;
+    justify-content: center;
+    align-items: center;
+}
+
+.list {
+    flex-direction: column;
+    display: flex;
+    border: 1px solid var(--color-text);
+    border-radius: 10px;
+    width: 50%;
+    list-style-type: none;
+}
+
+.list li{
+    padding: 15px;
+    width: 100%;
+    border-bottom: 1px solid var(--color-text);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.btn {
+    padding: 10px 5px;
+    text-align: center;
+    text-decoration: none;
+}
+
+.btn-detail {
+    background-color: var(--color-primary);
+    color: white;
+}
+
+.btn-detail:hover {
+    background-color: white;
+    color:  var(--color-primary);
+}
+
+.btn-edit {
+    background-color: #ffce00;
+    color: white;
+}
+
+.btn-edit:hover {
+    background-color: white;
+    color:  #ffce00;
+}
+
+.btn-delete {
+    background-color: red;
+    color: white;
+}
+
+.btn-delete:hover {
+    background-color: white;
+    color:  red;
+}
+
+.search {
+    margin: 20px;
+    width: 50%;
+}
+
+.search-bar{
+    padding: 10px;
+    width: 80%;
+}
+
+.search-btn {
+    padding: 6px;
+    width: 19%;
+    background-color: var(--color-primary);
+    color: white;
+}
+
+.aux-btns {
+    width: 50%;
+    display: flex;
+    justify-content: flex-start;
+    margin: 10px;
+}
+
+.aux-btns a {
+    padding-right: 10px;
+    text-decoration: none;
+}

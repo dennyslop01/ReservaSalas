@@ -1,0 +1,27 @@
+{% extends 'layout/base.html' %}
+
+{% block 'title' %} Clientes {% endblock 'title' %}
+
+{% block 'content' %}
+<form class="search" action="{% url 'client' %}" method="GET">
+    <input type="text" name="search" class="search-bar" placeholder="Buscar cliente..." />
+    <input type="submit" value="Buscar" class="btn search-btn" />
+</form>
+
+<span class="aux-btns">
+    <a href="{% url 'client' %}">Ver Todos</a>
+    <a href="{% url 'client' %}">Añadir Cliente</a>
+</span>  
+
+<ul class="list">
+    {% for client in  clients%}
+        <li>{{ client }}
+            <span>
+                <a hresf='' class="btn btn-detail">Ver</a>
+                <a hresf='' class="btn btn-edit">Editar</a>
+                <a hresf='' class="btn btn-delete">Borrar</a>
+            </span>
+        </li>
+    {% endfor %}
+</ul>
+{% endblock 'content' %}   
